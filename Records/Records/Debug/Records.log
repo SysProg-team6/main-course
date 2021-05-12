@@ -1,0 +1,7 @@
+﻿  database.cpp
+  insurancepolicy.cpp
+  Records.cpp
+  Generating Code...
+C:\Users\Olena\source\c++\Records\Records\database.cpp(110): warning C4172: returning address of local variable or temporary: policy
+C:\Users\Olena\source\c++\Records\Records\database.cpp(119): warning C4172: returning address of local variable or temporary: ip
+  Records.vcxproj -> C:\Users\Olena\source\c++\Records\Debug\Records.exe
