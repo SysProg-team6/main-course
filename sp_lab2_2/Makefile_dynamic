@@ -1,0 +1,13 @@
+#Makefile
+binary: main.o libpolicy.so
+        g++ -o binary main.o -L. -lpolicy -Wl.--rpath..
+main.o: main.cpp
+        g++ -c main.cpp
+libpolicy.so: insurancepolicy.o database.o
+        g++ -shared -o libpolicy.so insurancepolicy.o database.o
+insurancepolicy.o: insurancepolicy.cpp
+        g++ -c -fPIC insurancepolicy.cpp
+database.o: database.cpp
+        g++ -c -fPIC database.cpp
+clean: 
+        rm -f *.o *.so binary

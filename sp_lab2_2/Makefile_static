@@ -1,0 +1,11 @@
+#Makefile
+binary: main.o libpolicy.a
+        g++ -o binary main.o -L. -lpolicy
+main.o: main.cpp
+        g++ -c main.cpp
+libpolicy.a: InsurancePolicy.o
+        ar cr libpolicy.a InsurancePolicy.o
+InsurancePolicy.o: InsurancePolicy.cpp
+        g++ -c InsurancePolicy.cpp
+clean: 
+        rm -f *.o *.a binary
